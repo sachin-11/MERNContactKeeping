@@ -1,6 +1,15 @@
 const express = require("express");
+const connectDB = require("./config/db");
 
 const app = express();
+
+//connected database
+
+connectDB();
+
+//init middleware
+
+app.use(express.json());
 
 //Test router
 
